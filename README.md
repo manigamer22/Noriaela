@@ -5,7 +5,6 @@
 Requirements:
 
 * cmake
-* C++17 compiler (Clang)
 * Shared library injector
 
 To generate the project files:
