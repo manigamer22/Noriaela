@@ -1,7 +1,5 @@
 # Counter Strike Global Offensive Skin Changer Mac
 
-**MacOS**
-
 ### Setup
 
 Requirements:
