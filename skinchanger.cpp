@@ -6,7 +6,8 @@
 
 std::unordered_map<int, cSkin> cSkinchanger::SkinList = std::unordered_map<int, cSkin>( {
 	/* https://github.com/sonicrules11/CSGO-skin-ID-dumper/blob/master/item_index.txt */
-	// std::make_pair(WEAPON, cSkin(SKIN, WEAR, KNIFE ONLY, Stattrak, (char*)("Name") or nullptr for no name, FLOAT)),
+	/* NOTE: Change knife model in skinchanger.h */
+	// std::make_pair(WEAPON, cSkin(SKIN, WEAR, -1, Stattrak, (char*)("Name") or nullptr for no name, FLOAT)),
 	// Knife
 	std::make_pair(WEAPON_KNIFE, cSkin(414, -1, WEAPON_KNIFE_M9_BAYONET, -1, nullptr, 0.0001f)),
 	// Pistols
