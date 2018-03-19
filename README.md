@@ -23,4 +23,3 @@ https://github.com/ToxicOverflow/Microwave-Open-Source
 
 #### Skin List
 https://github.com/sonicrules11/CSGO-skin-ID-dumper/blob/master/item_index.txt
- 
