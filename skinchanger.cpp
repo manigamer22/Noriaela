@@ -39,6 +39,7 @@ std::unordered_map<int, cSkin> cSkinchanger::SkinList = std::unordered_map<int, 
 	std::make_pair(WEAPON_MP9, cSkin(-1, -1, -1, -1, nullptr, 0.0001f)),
 	std::make_pair(WEAPON_P90, cSkin(-1, -1, -1, -1, nullptr, 0.0001f)),
 	std::make_pair(WEAPON_UMP45, cSkin(-1, -1, -1, -1, nullptr, 0.0001f)),
+	std::make_pair(WEAPON_BIZON, cSkin(-1, -1, -1, -1, nullptr, 0.0001f)),
 	// Heavy
 	std::make_pair(WEAPON_MAG7, cSkin(-1, -1, -1, -1, nullptr, 0.0001f)),
 	std::make_pair(WEAPON_NOVA, cSkin(-1, -1, -1, -1, nullptr, 0.0001f)),
