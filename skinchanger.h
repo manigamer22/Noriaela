@@ -28,20 +28,21 @@ public:
     static std::unordered_map<int, cSkin> SkinList;
 
     std::unordered_map<int, std::string> KnifeToModelMatrix = std::unordered_map<int, std::string>({
-                    {WEAPON_KNIFE_BAYONET, "models/weapons/v_knife_bayonet.mdl"},
-                    {WEAPON_KNIFE_FLIP, "models/weapons/v_knife_flip.mdl"},
-                    {WEAPON_KNIFE_GUT, "models/weapons/v_knife_gut.mdl"},
-                    {WEAPON_KNIFE_KARAMBIT, "models/weapons/v_knife_karam.mdl"},
-                    {WEAPON_KNIFE_M9_BAYONET, "models/weapons/v_knife_m9_bay.mdl"},
-                    {WEAPON_KNIFE_TACTICAL, "models/weapons/v_knife_tactical.mdl"},
-                    {WEAPON_KNIFE_FALCHION, "models/weapons/v_knife_falchion_advanced.mdl"},
-                    {WEAPON_KNIFE_SURVIVAL_BOWIE, "models/weapons/v_knife_survival_bowie.mdl"},
-                    {WEAPON_KNIFE_BUTTERFLY, "models/weapons/v_knife_butterfly.mdl"},
-                    {WEAPON_KNIFE_PUSH, "models/weapons/v_knife_push.mdl"}
+                    {WEAPON_KNIFE_BAYONET, "models/weapons/v_knife_bayonet.mdl"}, // Bayonet Knife
+                    {WEAPON_KNIFE_FLIP, "models/weapons/v_knife_flip.mdl"}, // Flip Knife
+                    {WEAPON_KNIFE_GUT, "models/weapons/v_knife_gut.mdl"}, // Gut Knife
+                    {WEAPON_KNIFE_KARAMBIT, "models/weapons/v_knife_karam.mdl"}, // Karambit Knife 
+                    {WEAPON_KNIFE_M9_BAYONET, "models/weapons/v_knife_m9_bay.mdl"}, // M9 Knife
+                    {WEAPON_KNIFE_TACTICAL, "models/weapons/v_knife_tactical.mdl"}, // Huntsman Knife
+                    {WEAPON_KNIFE_FALCHION, "models/weapons/v_knife_falchion_advanced.mdl"}, // Falchion Knife (Animation Broken)
+                    {WEAPON_KNIFE_SURVIVAL_BOWIE, "models/weapons/v_knife_survival_bowie.mdl"}, // Bowie Knife (Animation Broken)
+                    {WEAPON_KNIFE_BUTTERFLY, "models/weapons/v_knife_butterfly.mdl"}, // Butterfly Knife (Animation Broken)
+                    {WEAPON_KNIFE_PUSH, "models/weapons/v_knife_push.mdl"} // Shadow Daggers (Animation Broken)
             });
 
 
-    int Knife = WEAPON_KNIFE_BAYONET;
+    int Knife = WEAPON_KNIFE_M9_BAYONET;
+    int KnifeT = WEAPON_KNIFE_TACTICAL;
 
     void FireEventClientSide(IGameEvent* event);
     static std::unordered_map<int, const char*> ModelList;

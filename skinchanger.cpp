@@ -10,6 +10,7 @@ std::unordered_map<int, cSkin> cSkinchanger::SkinList = std::unordered_map<int, 
 	// std::make_pair(WEAPON, cSkin(SKIN, WEAR, -1, Stattrak, (char*)("Name") or nullptr for no name, FLOAT)),
 	// Knife
 	std::make_pair(WEAPON_KNIFE, cSkin(414, -1, WEAPON_KNIFE_M9_BAYONET, -1, nullptr, 0.0001f)),
+    std::make_pair(WEAPON_KNIFE_T, cSkin(414, -1, WEAPON_KNIFE_M9_BAYONET, -1, nullptr, 0.0001f)),
 	// Pistols
 	std::make_pair(WEAPON_CZ75A, cSkin(-1, -1, -1, -1, nullptr, 0.0001f)),
 	std::make_pair(WEAPON_DEAGLE, cSkin(-1, -1, -1, -1, nullptr, 0.0001f)),
@@ -70,7 +71,7 @@ void cSkinchanger::FrameStageNotify(ClientFrameStage_t stage) {
 
 void cSkinchanger::FindModels() {
     ModelList[pModelInfo->GetModelIndex("models/weapons/v_knife_default_ct.mdl")] = KnifeToModelMatrix[Knife].c_str();
-    ModelList[pModelInfo->GetModelIndex("models/weapons/v_knife_default_t.mdl")] = KnifeToModelMatrix[Knife].c_str();
+    ModelList[pModelInfo->GetModelIndex("models/weapons/v_knife_default_t.mdl")] = KnifeToModelMatrix[KnifeT].c_str();
 }
 
 void cSkinchanger::ForceSkins() {
@@ -111,8 +112,11 @@ void cSkinchanger::ForceSkins() {
 
                             cSkin skin = std::move(SkinIter->second);
 
-                            if(Knife && (*Definition == WEAPON_KNIFE || *Definition == WEAPON_KNIFE_T))
+                            if(Knife && (*Definition == WEAPON_KNIFE))
                                 *attributableItem->GetItemDefinitionIndex() = Knife;
+                            else if(KnifeT && (*Definition == WEAPON_KNIFE_T))
+                                *attributableItem->GetItemDefinitionIndex() = KnifeT;
+
 
 
                             if(skin.name){
