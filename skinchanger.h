@@ -1,11 +1,4 @@
-//
-// Created by toxicoverflow on 23.02.17.
-//
-
 #include "main.hpp"
-
-#ifndef MICROWAVE_SKINCHANGER_H
-#define MICROWAVE_SKINCHANGER_H
 
 class cSkin{
 public:
@@ -26,6 +19,7 @@ public:
 class cSkinchanger {
 public:
     static std::unordered_map<int, cSkin> SkinList;
+    static std::unordered_map<int, const char*> ModelList;
 
     std::unordered_map<int, std::string> KnifeToModelMatrix = std::unordered_map<int, std::string>({
                     {WEAPON_KNIFE_BAYONET, "models/weapons/v_knife_bayonet.mdl"}, // Bayonet Knife
@@ -40,13 +34,7 @@ public:
                     {WEAPON_KNIFE_PUSH, "models/weapons/v_knife_push.mdl"} // Shadow Daggers (Animation Broken)
             });
 
-
-    int Knife = WEAPON_KNIFE_M9_BAYONET;
-    int KnifeT = WEAPON_KNIFE_TACTICAL;
-
     void FireEventClientSide(IGameEvent* event);
-    static std::unordered_map<int, const char*> ModelList;
-
     void FindModels();
     void Init();
     void ForceSkins();
@@ -58,6 +46,3 @@ public:
 };
 
 extern cSkinchanger* skinchanger;
-
-
-#endif //MICROWAVE_SKINCHANGER_H
