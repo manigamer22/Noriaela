@@ -4,13 +4,16 @@
 
 #include "skinchanger.h"
 
+int Knife = WEAPON_KNIFE_M9_BAYONET; // Change knife models here
+int KnifeT = WEAPON_KNIFE_KARAMBIT; // Change knife models here
+
 std::unordered_map<int, cSkin> cSkinchanger::SkinList = std::unordered_map<int, cSkin>( {
 	/* https://github.com/sonicrules11/CSGO-skin-ID-dumper/blob/master/item_index.txt */
-	/* NOTE: Change knife model in skinchanger.h */
 	// std::make_pair(WEAPON, cSkin(SKIN, WEAR, -1, Stattrak, (char*)("Name") or nullptr for no name, FLOAT)),
 	// Knife
-	std::make_pair(WEAPON_KNIFE, cSkin(414, -1, WEAPON_KNIFE_M9_BAYONET, -1, nullptr, 0.0001f)),
-    std::make_pair(WEAPON_KNIFE_T, cSkin(414, -1, WEAPON_KNIFE_M9_BAYONET, -1, nullptr, 0.0001f)),
+
+	std::make_pair(WEAPON_KNIFE, cSkin(414, -1, Knife, -1, nullptr, 0.0001f)),
+    	std::make_pair(WEAPON_KNIFE_T, cSkin(414, -1, KnifeT, -1, nullptr, 0.0001f)),
 	// Pistols
 	std::make_pair(WEAPON_CZ75A, cSkin(-1, -1, -1, -1, nullptr, 0.0001f)),
 	std::make_pair(WEAPON_DEAGLE, cSkin(-1, -1, -1, -1, nullptr, 0.0001f)),
