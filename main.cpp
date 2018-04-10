@@ -8,9 +8,7 @@ int __attribute__((constructor)) Init() {
     InitializeVMTs();
     
     InitializeHooks();
-    
-    NetVarManager::dumpNetvars();
-    
+        
     Offsets::getOffsets();
     
     return 0;
