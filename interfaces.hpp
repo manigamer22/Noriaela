@@ -10,6 +10,7 @@ extern IEngineTrace* pEngineTrace;
 extern IClientMode* pClientMode;
 extern IGameEventManager2* pGameEventManager;
 
+extern RecvVarProxyFn g_pSequence;
 extern VMT* game_event_vmt;
 extern VMT* testvmt;
 extern VMT* client_vmt;

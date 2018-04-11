@@ -1,4 +1,5 @@
 #include "main.hpp"
+#include "skinchanger.h"
 
 void InitializeInterfaces() {
     pSurface = GetInterface<ISurface>("./bin/osx64/vguimatsurface.dylib", "VGUI_Surface");
@@ -29,5 +30,8 @@ void InitializeHooks() {
     
     client_vmt->HookVM((void*)hkFrameStage, 36);
     client_vmt->ApplyVMT();
+
+    g_pSequence = (RecvVarProxyFn)NetVarManager::HookProp("DT_BaseViewModel", "m_nSequence", HSequenceProxyFn);
+
 }
 

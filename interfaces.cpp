@@ -12,6 +12,8 @@ IVModelInfo* pModelInfo = nullptr;
 IEngineTrace* pEngineTrace = nullptr;
 IClientMode* pClientMode = nullptr;
 
+RecvVarProxyFn g_pSequence  = nullptr;
+
 VMT* game_event_vmt = nullptr;
 VMT* testvmt = nullptr;
 VMT* client_vmt = nullptr;

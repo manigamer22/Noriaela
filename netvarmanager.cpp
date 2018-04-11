@@ -88,3 +88,15 @@ int NetVarManager::getProp(std::vector<RecvTable *> tables, RecvTable *recvTable
 
 	return extraOffset;
 }
+
+uintptr_t NetVarManager::HookProp(const char* tableName, const char* propName, RecvVarProxyFn function) {
+    RecvProp* recvProp = 0;
+    NetVarManager::getProp(NetVarManager::getTables(), tableName, propName, &recvProp);
+    
+    if (!recvProp)
+        return 0;
+    
+    uintptr_t old = (uintptr_t)recvProp->m_ProxyFn;
+    recvProp->m_ProxyFn = function;
+    return old;
+}

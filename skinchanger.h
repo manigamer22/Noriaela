@@ -1,5 +1,7 @@
 #include "main.hpp"
 
+void HSequenceProxyFn(const CRecvProxyData *pDataConst, void *pStruct, void *pOut);
+
 class cSkin{
 public:
     
@@ -28,10 +30,10 @@ public:
                     {WEAPON_KNIFE_KARAMBIT, "models/weapons/v_knife_karam.mdl"}, // Karambit Knife 
                     {WEAPON_KNIFE_M9_BAYONET, "models/weapons/v_knife_m9_bay.mdl"}, // M9 Knife
                     {WEAPON_KNIFE_TACTICAL, "models/weapons/v_knife_tactical.mdl"}, // Huntsman Knife
-                    {WEAPON_KNIFE_FALCHION, "models/weapons/v_knife_falchion_advanced.mdl"}, // Falchion Knife (Animation Broken)
-                    {WEAPON_KNIFE_SURVIVAL_BOWIE, "models/weapons/v_knife_survival_bowie.mdl"}, // Bowie Knife (Animation Broken)
-                    {WEAPON_KNIFE_BUTTERFLY, "models/weapons/v_knife_butterfly.mdl"}, // Butterfly Knife (Animation Broken)
-                    {WEAPON_KNIFE_PUSH, "models/weapons/v_knife_push.mdl"} // Shadow Daggers (Animation Broken)
+                    {WEAPON_KNIFE_FALCHION, "models/weapons/v_knife_falchion_advanced.mdl"}, // Falchion Knife 
+                    {WEAPON_KNIFE_SURVIVAL_BOWIE, "models/weapons/v_knife_survival_bowie.mdl"}, // Bowie Knife 
+                    {WEAPON_KNIFE_BUTTERFLY, "models/weapons/v_knife_butterfly.mdl"}, // Butterfly Knife 
+                    {WEAPON_KNIFE_PUSH, "models/weapons/v_knife_push.mdl"} // Shadow Daggers 
             });
 
     void FireEventClientSide(IGameEvent* event);

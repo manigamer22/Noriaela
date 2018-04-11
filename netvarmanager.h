@@ -4,4 +4,6 @@ namespace NetVarManager {
 	int getOffset(std::vector<RecvTable *> tables, const char *tableName, const char *propName);
 	int getProp(std::vector<RecvTable *> tables, const char *tableName, const char *propName, RecvProp **prop = 0);
 	int getProp(std::vector<RecvTable *> tables, RecvTable *recvTable, const char *propName, RecvProp **prop = 0);
+	uintptr_t HookProp(const char* tableName, const char* propName, RecvVarProxyFn function);
+
 }
