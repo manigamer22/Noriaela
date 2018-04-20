@@ -1,5 +1,5 @@
-#include "main.hpp"
-#include "skinchanger.h"
+#include "../main.hpp"
+#include "../Hacks/skinchanger.h"
 
 bool bOnce = false; /*https://www.unknowncheats.me/forum/1190911-post11.html */
 

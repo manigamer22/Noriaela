@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Vector.h"
-#include "main.hpp"
+#include "../main.hpp"
 
 struct model_t {
     char name[255];

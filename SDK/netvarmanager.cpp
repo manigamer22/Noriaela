@@ -1,4 +1,4 @@
-#include "main.hpp"
+#include "../main.hpp"
 #include <cstdio>
 std::vector<RecvTable *> NetVarManager::getTables()
 {

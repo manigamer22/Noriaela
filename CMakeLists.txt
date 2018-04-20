@@ -4,5 +4,5 @@ project(Noriaela)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ./Build)
 
-set(SOURCE_FILES C_BaseEntity.h Color.h common.h CUserCmd.h framestage.cpp hacks.hpp Hooks.cpp Hooks.hpp IBaseClientDLL.h IClientEntityList.h ICvar.h IEngineClient.h IEngineTrace.h IMaterial.h interfaces.cpp interfaces.hpp IPanel.h ISurface.h IVDebugOverlay.h IVModelInfo.h main.cpp main.hpp netvarmanager.cpp netvarmanager.h offsets.cpp offsets.h Others.h Vector.h VMT.h VMatrix.h skinchanger.cpp skinchanger.h GameEvent.h firegameevent.cpp)
+set(SOURCE_FILES main.cpp main.hpp Hacks/skinchanger.cpp Hacks/skinchanger.h hacks.hpp Hooks/framestage.cpp Hooks/firegameevent.cpp Interfaces/Hooks.cpp Interfaces/Hooks.hpp Interfaces/interfaces.cpp Interfaces/interfaces.hpp SDK/C_BaseEntity.h SDK/Vector.h SDK/Color.h SDK/common.h SDK/CUserCmd.h SDK/GameEvent.h SDK/IBaseClientDLL.h SDK/IClientEntityList.h SDK/ICvar.h SDK/IEngineClient.h SDK/IEngineTrace.h SDK/IMaterial.h SDK/IPanel.h SDK/ISurface.h SDK/IVDebugOverlay.h SDK/IVModelInfo.h SDK/netvarmanager.cpp SDK/netvarmanager.h SDK/offsets.cpp SDK/offsets.h SDK/Others.h SDK/VMatrix.h SDK/VMT.h)
 add_library(Noriaela SHARED ${SOURCE_FILES})

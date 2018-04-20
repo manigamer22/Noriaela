@@ -1,4 +1,4 @@
-#include "main.hpp"
+#include "../main.hpp"
 
 ISurface* pSurface = nullptr;
 IPanel* pPanel = nullptr;

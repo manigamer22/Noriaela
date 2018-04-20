@@ -2,8 +2,8 @@
 // Created by toxicoverflow on 23.02.17.
 //
 
-#include "main.hpp"
-#include "skinchanger.h"
+#include "../main.hpp"
+#include "../Hacks/skinchanger.h"
 
 bool hkFireEventClientSide(void* thisptr, IGameEvent* event){
 

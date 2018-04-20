@@ -34,37 +34,37 @@
 
 using namespace std;
 
-#include "Vector.h"
-#include "Others.h"
-#include "common.h"
-#include "GameEvent.h"
-#include "Color.h"
-#include "IBaseClientDLL.h"
-#include "ISurface.h"
-#include "IPanel.h"
-#include "ICvar.h"
-#include "netvarmanager.h"
-#include "offsets.h"
-#include "C_BaseEntity.h"
-#include "IClientEntityList.h"
-#include "IVDebugOverlay.h"
-#include "IEngineClient.h"
-#include "IEngineTrace.h"
-#include "IMaterial.h"
-#include "IVModelInfo.h"
-#include "CUserCmd.h"
+#include "SDK/Vector.h"
+#include "SDK/Others.h"
+#include "SDK/common.h"
+#include "SDK/GameEvent.h"
+#include "SDK/Color.h"
+#include "SDK/IBaseClientDLL.h"
+#include "SDK/ISurface.h"
+#include "SDK/IPanel.h"
+#include "SDK/ICvar.h"
+#include "SDK/netvarmanager.h"
+#include "SDK/offsets.h"
+#include "SDK/C_BaseEntity.h"
+#include "SDK/IClientEntityList.h"
+#include "SDK/IVDebugOverlay.h"
+#include "SDK/IEngineClient.h"
+#include "SDK/IEngineTrace.h"
+#include "SDK/IMaterial.h"
+#include "SDK/IVModelInfo.h"
+#include "SDK/CUserCmd.h"
 
 /* Hack Related. */
 #include "hacks.hpp"
 
 /* VMT */
-#include "VMT.h"
+#include "SDK/VMT.h"
 
 /* Hooks */
-#include "Hooks.hpp"
+#include "Interfaces/Hooks.hpp"
 
 /* Interfaces */
-#include "interfaces.hpp"
+#include "Interfaces/interfaces.hpp"
 
 
 

@@ -1,4 +1,4 @@
-#include "main.hpp"
+#include "../main.hpp"
 
 void HSequenceProxyFn(const CRecvProxyData *pDataConst, void *pStruct, void *pOut);
 

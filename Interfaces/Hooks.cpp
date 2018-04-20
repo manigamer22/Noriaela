@@ -1,5 +1,5 @@
-#include "main.hpp"
-#include "skinchanger.h"
+#include "../main.hpp"
+#include "../Hacks/skinchanger.h"
 
 void InitializeInterfaces() {
     pSurface = GetInterface<ISurface>("./bin/osx64/vguimatsurface.dylib", "VGUI_Surface");
