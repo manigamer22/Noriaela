@@ -6,6 +6,7 @@ Requirements:
 
 * cmake
 * Shared library injector
+* [Homebrew](https://brew.sh)
 
 To generate the project files:
 
