@@ -490,7 +490,7 @@ void MatrixSetRow( VMatrix& src, int nCol, const Vector& column );
 void Vector3DMultiply( const VMatrix& src1, const Vector& src2, Vector& dst );
 
 // Vector3DMultiplyPosition treats src2 as if it's a point (adds the translation)
-inline void Vector3DMultiplyPosition( const VMatrix& src1, const VectorByValue& src2, Vector& dst );
+void Vector3DMultiplyPosition( const VMatrix& src1, const VectorByValue& src2, Vector& dst );
 
 // Vector3DMultiplyPositionProjective treats src2 as if it's a point
 // and does the perspective divide at the end

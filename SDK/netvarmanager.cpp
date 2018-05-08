@@ -1,50 +1,41 @@
 #include "../main.hpp"
 #include <cstdio>
-std::vector<RecvTable *> NetVarManager::getTables()
-{
+std::vector<RecvTable *> NetVarManager::getTables() {
 	std::vector<RecvTable *> tables;
 
 	ClientClass *clientClass = pClient->GetAllClasses();
 	if (!clientClass)
 		return std::vector<RecvTable*>();
 
-	while (clientClass)
-	{
+	while (clientClass) {
 		RecvTable *recvTable = clientClass->m_pRecvTable;
 		tables.push_back(recvTable);
 
 		clientClass = clientClass->m_pNext;
 	}
-
 	return tables;
 }
 
-RecvTable* NetVarManager::getTable(std::vector<RecvTable *> tables, const char *tableName)
-{
+RecvTable* NetVarManager::getTable(std::vector<RecvTable *> tables, const char *tableName) {
 	if (tables.empty())
 		return NULL;
 
-	for (unsigned long i = 0; i < tables.size(); i++)
-	{
+	for (unsigned long i = 0; i < tables.size(); i++) {
 		RecvTable *table = tables[i];
-
 		if (!table)
 			continue;
-
 		if (strcasecmp(table->m_pNetTableName, tableName) == 0)
 			return table;
 	}
-
 	return NULL;
 }
 
-int NetVarManager::getOffset(std::vector<RecvTable *> tables, const char *tableName, const char *propName)
-{
+int NetVarManager::getOffset(std::vector<RecvTable *> tables, const char *tableName, const char *propName) {
 	int offset = getProp(tables, tableName, propName);
 	if (!offset)
 		return 0;
-    else
-        pCvar->ConsoleColorPrintf(Color(0, 255, 0, 255), "Found: %s ~ > 0x%X\n", propName, offset);
+    //else
+        //pCvar->ConsoleColorPrintf(Color(0, 255, 0, 255), "Found: %s ~ > 0x%X\n", propName, offset);
 
 	return offset;
 }

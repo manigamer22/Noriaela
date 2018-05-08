@@ -1,16 +1,11 @@
 #include "main.hpp"
 
 int __attribute__((constructor)) Init() {
-    /* do shiz her. */
-    
     InitializeInterfaces();
-    
     InitializeVMTs();
-    
     InitializeHooks();
-        
     Offsets::getOffsets();
-    
+    PrintInfo();
     return 0;
 }
 

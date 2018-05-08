@@ -2,8 +2,7 @@
 
 COffsets offsets;
 
-void Offsets::getOffsets()
-{
+void Offsets::getOffsets() {
 	std::vector<RecvTable *> tables = NetVarManager::getTables();
 
 	offsets.DT_BasePlayer.m_Local = NetVarManager::getOffset(tables, "DT_BasePlayer", "m_Local");

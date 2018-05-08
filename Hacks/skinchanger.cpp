@@ -4,7 +4,7 @@
 
 #include "skinchanger.h"
 
-int Knife = WEAPON_KNIFE_FLIP; // Change knife models here
+int Knife = WEAPON_KNIFE_M9_BAYONET; // Change knife models here
 int KnifeT = WEAPON_KNIFE_FLIP; // Change knife models here
 
 unordered_map<int, cSkin> cSkinchanger::SkinList = unordered_map<int, cSkin>( {
@@ -26,7 +26,7 @@ unordered_map<int, cSkin> cSkinchanger::SkinList = unordered_map<int, cSkin>( {
 	// Rifles
 	make_pair(WEAPON_AK47, cSkin(-1, -1, -1, -1, 0, nullptr, 0.0001f)),
 	make_pair(WEAPON_AUG, cSkin(-1, -1, -1, -1, 0, nullptr, 0.0001f)),
-	make_pair(WEAPON_AWP, cSkin(-1, -1, -1, -1, 0, nullptr, 0.0001f)),
+	make_pair(WEAPON_AWP, cSkin(344, -1, -1, -1, 0, (char*)("I sucked cock for this"), 0.0001f)),
 	make_pair(WEAPON_FAMAS, cSkin(-1, -1, -1, -1, 0, nullptr, 0.0001f)),
 	make_pair(WEAPON_G3SG1, cSkin(-1, -1, -1, -1, 0, nullptr, 0.0001f)),
 	make_pair(WEAPON_M4A1_SILENCER, cSkin(-1, -1, -1, -1, 0, nullptr, 0.0001f)),
@@ -164,7 +164,7 @@ void cSkinchanger::Init() {
 }
 
 void cSkinchanger::FireEventClientSide(IGameEvent *event) {
-    if (!strcmp(event->GetName(), "game_newmap")) {
+    if(!strcmp(event->GetName(), "game_newmap")) {
         Init();
     }
 }

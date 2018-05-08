@@ -35,3 +35,8 @@ void InitializeHooks() {
 
 }
 
+void PrintInfo() {
+    pCvar->ConsoleColorPrintf(Color::Yellow(),   "Noriaela Version 1\n");
+    pCvar->ConsoleColorPrintf(Color::Yellow(),   "Coded by :\n");
+    pCvar->ConsoleColorPrintf(Color::Yellow(),   "Warlauke");
+}
