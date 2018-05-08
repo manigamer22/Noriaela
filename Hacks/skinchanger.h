@@ -34,21 +34,23 @@ public:
         {WEAPON_KNIFE_FALCHION, "models/weapons/v_knife_falchion_advanced.mdl"}, // Falchion Knife 
         {WEAPON_KNIFE_SURVIVAL_BOWIE, "models/weapons/v_knife_survival_bowie.mdl"}, // Bowie Knife 
         {WEAPON_KNIFE_BUTTERFLY, "models/weapons/v_knife_butterfly.mdl"}, // Butterfly Knife 
-        {WEAPON_KNIFE_PUSH, "models/weapons/v_knife_push.mdl"} // Shadow Daggers 
+        {WEAPON_KNIFE_PUSH, "models/weapons/v_knife_push.mdl"}, // Shadow Daggers 
+        {WEAPON_KNIFE, "models/weapons/v_knife_default_ct.mdl"}, // Default CT Knife (Only needed if you don't want to use a knife)
+        {WEAPON_KNIFE_T, "models/weapons/v_knife_default_t.mdl"} // Default T Knife (Only needed if you don't want to use a knife)
     });
 
     unordered_map<size_t, string> EntityQuality = {
-    {0, "Normal"},
-    {1, "Genuine"},
-    {2, "Vintage"},
-    {3, "Unusual"},
-    {5, "Community"},
-    {6, "Developer"},
-    {7, "Self-Made"},
-    {8, "Customized"},
-    {9, "Strange"},
-    {10, "Completed"},
-    {12, "Tournament"}
+    {0, "Normal"}, // Normal
+    {1, "Genuine"}, // Genuine
+    {2, "Vintage"}, // Vintage
+    {3, "Unusual"}, // Star
+    {5, "Community"}, // Commuinity 
+    {6, "Developer"}, // Valve 
+    {7, "Self-Made"}, // Protoype
+    {8, "Customized"}, // Customized
+    {9, "Strange"}, // Stattrak™
+    {10, "Completed"}, // Completed
+    {12, "Tournament"} // Souvenir
     };
     void FireEventClientSide(IGameEvent* event);
     void FindModels();
