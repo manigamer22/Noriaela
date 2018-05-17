@@ -1,4 +1,4 @@
-#include "main.hpp"
+#include "main.h"
 
 int __attribute__((constructor)) Init() {
     InitializeInterfaces();

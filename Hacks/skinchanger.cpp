@@ -1,36 +1,32 @@
-//
-// Created by toxicoverflow on 23.02.17.
-//
-
 #include "skinchanger.h"
 
-int Knife = WEAPON_KNIFE_M9_BAYONET; // Change knife models here
-int KnifeT = WEAPON_KNIFE_FLIP; // Change knife models here
+int Knife = WEAPON_KNIFE_BAYONET; // Change knife models here
+int KnifeT = WEAPON_KNIFE_M9_BAYONET; // Change knife models here
 
 unordered_map<int, cSkin> cSkinchanger::SkinList = unordered_map<int, cSkin>( {
 	/* https://github.com/sonicrules11/CSGO-skin-ID-dumper/blob/master/item_index.txt */
 	// make_pair(WEAPON, cSkin(SKIN, Seed, -1, Stattrak, Entity Quality, (char*)("Name") or nullptr for no name, Wear)),
-	make_pair(WEAPON_KNIFE, cSkin(59, -1, Knife, -1, 3, nullptr, 0.0001f)),
-    make_pair(WEAPON_KNIFE_T, cSkin(59, -1, KnifeT, -1, 3, nullptr, 0.0001f)),
+    make_pair(WEAPON_KNIFE, cSkin(-1, -1, Knife, -1, 3, nullptr, 0.0001f)),
+    make_pair(WEAPON_KNIFE_T, cSkin(-1, -1, KnifeT, -1, 3, nullptr, 0.0001f)),
 	// Pistols
 	make_pair(WEAPON_CZ75A, cSkin(-1, -1, -1, -1, 0, nullptr, 0.0001f)),
 	make_pair(WEAPON_DEAGLE, cSkin(-1, -1, -1, -1, 0, nullptr, 0.0001f)),
 	make_pair(WEAPON_ELITE, cSkin(-1, -1, -1, -1, 0, nullptr, 0.0001f)),
 	make_pair(WEAPON_FIVESEVEN, cSkin(-1, -1, -1, -1, 0, nullptr, 0.0001f)),
 	make_pair(WEAPON_GLOCK, cSkin(-1, -1, -1, -1, 0, nullptr, 0.0001f)),
-	make_pair(WEAPON_HKP2000, cSkin(-1, -1, -1, -1, 0, nullptr, 0.0001f)), // P2000
+	make_pair(WEAPON_HKP2000, cSkin(700, -1, -1, -1, 0, nullptr, 0.0001f)), // P2000
 	make_pair(WEAPON_P250, cSkin(-1, -1, -1, -1, 0, nullptr, 0.0001f)),
 	make_pair(WEAPON_REVOLVER, cSkin(-1, -1, -1, -1, 0, nullptr, 0.0001f)),
 	make_pair(WEAPON_TEC9, cSkin(-1, -1, -1, -1, 0, nullptr, 0.0001f)),
 	make_pair(WEAPON_USP_SILENCER, cSkin(-1, -1, -1, -1, 0, nullptr, 0.0001f)),
 	// Rifles
-	make_pair(WEAPON_AK47, cSkin(-1, -1, -1, -1, 0, nullptr, 0.0001f)),
+	make_pair(WEAPON_AK47, cSkin(14, -1, -1, -1, 0, (char*)("My Love"), 0.0001f)),
 	make_pair(WEAPON_AUG, cSkin(-1, -1, -1, -1, 0, nullptr, 0.0001f)),
-	make_pair(WEAPON_AWP, cSkin(344, -1, -1, -1, 0, (char*)("I sucked cock for this"), 0.0001f)),
+	make_pair(WEAPON_AWP, cSkin(344, -1, -1, -1, 12, (char*)("I sucked cock for this"), 0.4202f)),
 	make_pair(WEAPON_FAMAS, cSkin(-1, -1, -1, -1, 0, nullptr, 0.0001f)),
 	make_pair(WEAPON_G3SG1, cSkin(-1, -1, -1, -1, 0, nullptr, 0.0001f)),
 	make_pair(WEAPON_M4A1_SILENCER, cSkin(-1, -1, -1, -1, 0, nullptr, 0.0001f)),
-	make_pair(WEAPON_M4A1, cSkin(-1, -1, -1, -1, 0, nullptr, 0.0001f)),
+	make_pair(WEAPON_M4A1, cSkin(449, -1, -1, -1, 0, nullptr, 0.0001f)),
 	make_pair(WEAPON_SCAR20, cSkin(-1, -1, -1, -1, 0, nullptr, 0.0001f)),
 	make_pair(WEAPON_SG556, cSkin(-1, -1, -1, -1, 0, nullptr, 0.0001f)),
 	make_pair(WEAPON_SSG08, cSkin(-1, -1, -1, -1, 0, nullptr, 0.0001f)),
@@ -64,7 +60,6 @@ void cSkinchanger::FrameStageNotify(ClientFrameStage_t stage) {
                 Init();
                 bInit = true;
             }
-
             ForceSkins();
         }
     }
@@ -170,13 +165,11 @@ void cSkinchanger::FireEventClientSide(IGameEvent *event) {
 }
 
 // Fix Animations
-
 inline const int RandomSequence(int low, int high) {
     return (rand() % (high - low + 1) + low);
 }
 
 void HSequenceProxyFn(const CRecvProxyData *pDataConst, void *pStruct, void *pOut) {
-    
     CRecvProxyData* pData = const_cast<CRecvProxyData*>(pDataConst);
     C_BaseViewModel* pViewModel = (C_BaseViewModel*)pStruct;
     
@@ -194,7 +187,6 @@ void HSequenceProxyFn(const CRecvProxyData *pDataConst, void *pStruct, void *pOu
             int m_nSequence = (int)pData->m_Value.m_Int;
             
             if (!strcmp(model_filename, "models/weapons/v_knife_butterfly.mdl")) {
-                
                 switch (m_nSequence) {
                     case SEQUENCE_DEFAULT_DRAW:
                         m_nSequence = RandomSequence(SEQUENCE_BUTTERFLY_DRAW, SEQUENCE_BUTTERFLY_DRAW2);
@@ -205,9 +197,7 @@ void HSequenceProxyFn(const CRecvProxyData *pDataConst, void *pStruct, void *pOu
                     default:
                         m_nSequence++;
                 }
-                
             } else if (!strcmp(model_filename, "models/weapons/v_knife_falchion_advanced.mdl")) {
-                
                 switch (m_nSequence) {
                     case SEQUENCE_DEFAULT_IDLE2:
                         m_nSequence = SEQUENCE_FALCHION_IDLE1;
@@ -224,9 +214,7 @@ void HSequenceProxyFn(const CRecvProxyData *pDataConst, void *pStruct, void *pOu
                     default:
                         m_nSequence--;
                 }
-                
             } else if (!strcmp(model_filename, "models/weapons/v_knife_push.mdl")) {
-                
                 switch (m_nSequence) {
                     case SEQUENCE_DEFAULT_IDLE2:
                         m_nSequence = SEQUENCE_DAGGERS_IDLE1;
@@ -248,8 +236,7 @@ void HSequenceProxyFn(const CRecvProxyData *pDataConst, void *pStruct, void *pOu
                         break;
                     default:
                         m_nSequence += 2;
-                }
-                
+                }   
             } else if (!strcmp(model_filename, "models/weapons/v_knife_survival_bowie.mdl")) {
                 
                 switch (m_nSequence) {
@@ -263,11 +250,9 @@ void HSequenceProxyFn(const CRecvProxyData *pDataConst, void *pStruct, void *pOu
                         m_nSequence--;
                 }
                 
-            }
-            
+            }    
             pData->m_Value.m_Int = m_nSequence;
         }
     }
-    
     return g_pSequence(pData, pStruct, pOut);
 }

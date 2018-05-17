@@ -1,8 +1,5 @@
-
-struct COffsets
-{
-	struct
-	{
+struct COffsets {
+	struct {
 		int m_Local;
 		int m_aimPunchAngle;
 		int m_viewPunchAngle;
@@ -21,8 +18,7 @@ struct COffsets
 		int m_flLowerBodyYawTarget;
 	} DT_BasePlayer;
 
-	struct
-	{
+	struct {
 		int m_vecOrigin;
 		int m_nRenderMode;
 		int m_iTeamNum;
@@ -31,14 +27,12 @@ struct COffsets
 		int m_bSpotted;
 	} DT_BaseEntity;
 
-	struct
-	{
+	struct {
 		int m_hActiveWeapon;
 		int m_hMyWeapons;
 	} DT_BaseCombatCharacter;
 
-	struct
-	{
+	struct {
 		int m_iPing;
 		int m_iKills;
 		int m_iAssists;
@@ -50,8 +44,7 @@ struct COffsets
 		int m_iHealth;
 	} DT_PlayerResource;
 
-	struct
-	{
+	struct {
 		int m_iPlayerC4;
 		int m_iPlayerVIP;
 		int m_bHostageAlive;
@@ -86,16 +79,14 @@ struct COffsets
 		int m_nPersonaDataPublicCommendsFriendly;
 	} DT_CSPlayerResource;
 
-	struct
-	{
+	struct {
 		int m_bBombTicking;
 		int m_flC4Blow;
 		int m_bBombDefused;
 		int m_hBombDefuser;
 	} DT_PlantedC4;
 
-	struct
-	{
+	struct {
 		int m_iShotsFired;
 		int m_ArmorValue;
 		int m_bHasDefuser;
@@ -109,8 +100,7 @@ struct COffsets
 		int m_flFlashMaxAlpha;
 	} DT_CSPlayer;
 
-	struct
-	{
+	struct {
 		int m_iItemDefinitionIndex;
 		int m_iItemIDHigh;
 		int m_iAccountID;
@@ -124,39 +114,33 @@ struct COffsets
 		int m_OriginalOwnerXuidLow;
 	} DT_BaseAttributableItem;
 
-	struct
-	{
+	struct {
 		int m_nModelIndex;
 		int m_hWeapon;
 		int m_hOwner;
 	} DT_BaseViewModel;
 
-	struct
-	{
+	struct {
 		int m_fAccuracyPenalty;
 	} DT_WeaponCSBase;
 
-	struct
-	{
+	struct {
 		int m_bStartedArming;
 	} DT_WeaponC4;
 
-	struct
-	{
+	struct {
 		int m_flNextPrimaryAttack;
 		int m_hOwner;
 		int m_iClip1;
 		int m_bInReload;
 	} DT_BaseCombatWeapon;
 
-	struct
-	{
+	struct {
 		int m_bShouldGlow;
 	} DT_DynamicProp;
 };
 
-namespace Offsets
-{
+namespace Offsets {
 	void getOffsets();
 }
 

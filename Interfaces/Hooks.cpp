@@ -1,4 +1,4 @@
-#include "../main.hpp"
+#include "../main.h"
 #include "../Hacks/skinchanger.h"
 
 void InitializeInterfaces() {
@@ -24,10 +24,8 @@ void InitializeVMTs() {
 extern bool hkFireEventClientSide(void* thisptr, IGameEvent* event);
 
 void InitializeHooks() {
-
     game_event_vmt->HookVM((void*)hkFireEventClientSide, 11);
     game_event_vmt->ApplyVMT();
-    
     client_vmt->HookVM((void*)hkFrameStage, 36);
     client_vmt->ApplyVMT();
 
@@ -38,5 +36,5 @@ void InitializeHooks() {
 void PrintInfo() {
     pCvar->ConsoleColorPrintf(Color::Yellow(),   "Noriaela Version 1\n");
     pCvar->ConsoleColorPrintf(Color::Yellow(),   "Coded by :\n");
-    pCvar->ConsoleColorPrintf(Color::Yellow(),   "Warlauke");
+    pCvar->ConsoleColorPrintf(Color::Yellow(),   "Warlauke\n");
 }

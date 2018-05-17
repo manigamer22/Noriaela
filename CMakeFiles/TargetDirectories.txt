@@ -1,0 +1,3 @@
+/Users/jameshenson/Noriaela/CMakeFiles/rebuild_cache.dir
+/Users/jameshenson/Noriaela/CMakeFiles/edit_cache.dir
+/Users/jameshenson/Noriaela/CMakeFiles/Noriaela.dir

@@ -1,9 +1,9 @@
-#include "../main.hpp"
+#include "../main.h"
 
 COffsets offsets;
 
 void Offsets::getOffsets() {
-	std::vector<RecvTable *> tables = NetVarManager::getTables();
+	vector<RecvTable *> tables = NetVarManager::getTables();
 
 	offsets.DT_BasePlayer.m_Local = NetVarManager::getOffset(tables, "DT_BasePlayer", "m_Local");
 	offsets.DT_BasePlayer.m_aimPunchAngle = NetVarManager::getOffset(tables, "DT_BasePlayer", "m_aimPunchAngle");

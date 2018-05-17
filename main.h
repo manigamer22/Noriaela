@@ -1,5 +1,5 @@
-#ifndef main_hpp
-#define main_hpp
+#ifndef main_h
+#define main_h
 
 #include <stdio.h>
 #include <string>
@@ -55,17 +55,15 @@ using namespace std;
 #include "SDK/CUserCmd.h"
 
 /* Hack Related. */
-#include "hacks.hpp"
+#include "hacks.h"
 
 /* VMT */
 #include "SDK/VMT.h"
 
 /* Hooks */
-#include "Interfaces/Hooks.hpp"
+#include "Interfaces/Hooks.h"
 
 /* Interfaces */
-#include "Interfaces/interfaces.hpp"
-
-
+#include "Interfaces/interfaces.h"
 
 #endif /* main_hpp */
