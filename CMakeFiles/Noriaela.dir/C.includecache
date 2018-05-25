@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/jameshenson/Noriaela/Configs/ConvertUTF.c
+ConvertUTF.h
+/Users/jameshenson/Noriaela/Configs/ConvertUTF.h
+stdio.h
+-
+
+/Users/jameshenson/Noriaela/Configs/ConvertUTF.h
+

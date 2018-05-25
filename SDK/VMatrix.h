@@ -1,7 +1,3 @@
-//
-// Created by toxicoverflow on 20.02.17.
-//
-
 //========= Copyright Valve Corporation, All rights reserved. ============//
 //
 // Purpose:

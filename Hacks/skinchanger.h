@@ -4,9 +4,7 @@ void HSequenceProxyFn(const CRecvProxyData *pDataConst, void *pStruct, void *pOu
 
 class cSkin{
 public:
-    
     cSkin(){}
-    
     cSkin(int paintkit, int seed, int itemDefinition, int stattrack, int EntityQuality, char* szName, float flWear) :
             Paintkit(paintkit), Seed(seed), ItemDefinition(itemDefinition), StatTrack(stattrack), EntityQuality(EntityQuality), name(szName), Wear(flWear){}
 
@@ -56,7 +54,11 @@ public:
     void FindModels();
     void Init();
     void ForceSkins();
+    void LoadSkinsConfig();
     void FrameStageNotify(ClientFrameStage_t stage);
+    auto updateSkins() -> void;
+    bool shouldUpdate = false;
+    bool forceFullUpdate = false;
 
     C_BaseEntity* pLocalPlayer = nullptr;
 
