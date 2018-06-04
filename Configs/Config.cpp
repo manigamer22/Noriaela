@@ -31,9 +31,8 @@ bool fileExist(const char* path) {
 
 void Config::CreateConfigDirectory() {
     string usr = getenv("USER");
-    string start = "/USER/" + usr + "Desktop";
-    string start = "/USER/" + usr + "Desktop/Noriaela";
-    string end = "/Users/" + usr = "Desktop/Noriaela/configs/";
+    string start = "/USER/" + usr + "Noriaela";
+    string end = "/Users/" + usr = "Noriaela/configs/";
 
     if(!DoesDirectoryExist(start.c_str()))
         mkdir(start.c_str(), 0777);
