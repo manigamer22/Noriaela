@@ -1,4 +1,5 @@
 #include "cfg.h"
+#include "../Hacks/skinchanger.h"
 
 class Config {
 public:
@@ -32,10 +33,11 @@ public:
         
 	}
 
-	void SaveSkins();
 	void LoadSkins();
-	void CreateConfigDirectory();
-	void GetSkins(int SkinConfig);
+	void InitSkins();
+	void UpdateSkins();
+	cSkin GetWeaponConfiguration(const char *section);
+	bool HasWeaponConfiguration(const char* section);
 
 	CSimpleIniA skins_cfg;
 };
