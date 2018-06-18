@@ -24,10 +24,18 @@ bool fileExist(const char* path) {
     return stat(path, &info) == 0 && S_ISREG(info.st_mode);
 }
 
+<<<<<<< HEAD
 void Config::InitSkins() {
 	if(!fileExist(skins.c_str()))
 		return;
 	skins_cfg.SetUnicode(true);
+=======
+void Config::CreateConfigDirectory() {
+    string usr = getenv("USER");
+    string start = "/USER/" + usr + "Desktop";
+    string start = "/USER/" + usr + "Desktop/Noriaela";
+    string end = "/Users/" + usr = "Desktop/Noriaela/configs/";
+>>>>>>> parent of aeae63d... Fixed error. Thank you @canter123456#4576 for pointing it out
 
 	skins_cfg.SetDoubleValue("weapon_deagle", "id", GetFloatValue(skin.deagle));
     skins_cfg.SetDoubleValue("weapon_deagle", "itemdef", GetFloatValue(1));
