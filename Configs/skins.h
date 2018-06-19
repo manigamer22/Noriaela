@@ -3,9 +3,9 @@
 class SkinList {
 public:
 	int KnifeCT		= WEAPON_KNIFE_M9_BAYONET;
-	int KnifeT 		= WEAPON_KNIFE_BUTTERFLY;
-	int CTKnifeID	= 232;	// Forest DDPAT
-	int TKnifeID	= 232; 	// Crimson Web
+	int KnifeT 		= WEAPON_KNIFE_BAYONET;
+	int CTKnifeID	= 38;
+	int TKnifeID	= 38;
 	// Rifles
     int galil   = 661;
     int famas   = 604;
