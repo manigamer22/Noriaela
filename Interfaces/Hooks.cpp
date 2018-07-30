@@ -26,7 +26,7 @@ extern bool hkFireEventClientSide(void* thisptr, IGameEvent* event);
 void InitializeHooks() {
     game_event_vmt->HookVM((void*)hkFireEventClientSide, 11);
     game_event_vmt->ApplyVMT();
-    client_vmt->HookVM((void*)hkFrameStage, 36);
+    client_vmt->HookVM((void*)hkFrameStage, 37);
     client_vmt->ApplyVMT();
 
     g_pSequence = (RecvVarProxyFn)NetVarManager::HookProp("DT_BaseViewModel", "m_nSequence", HSequenceProxyFn);
