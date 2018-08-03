@@ -2,8 +2,8 @@
 
 class SkinList {
 public:
-	int KnifeCT		= WEAPON_KNIFE_M9_BAYONET;
-	int KnifeT 		= WEAPON_KNIFE_BAYONET;
+	int KnifeCT		= WEAPON_KNIFE_STILETTO;
+	int KnifeT 		= WEAPON_KNIFE_STILETTO;
 	int CTKnifeID	= 38;
 	int TKnifeID	= 38;
 	// Rifles

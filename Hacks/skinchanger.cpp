@@ -74,7 +74,6 @@ void cSkinchanger::FindModels() {
 }
 
 void cSkinchanger::LoadSkinsConfig() {
-    
 }
 
 void cSkinchanger::ForceSkins() {
@@ -171,7 +170,7 @@ void cSkinchanger::FireEventClientSide(IGameEvent *event) {
     }
 }
 
-// Fix Animations
+// Fix Animations (I don't know if any of the new knives have a new animation so I can't update them)
 inline const int RandomSequence(int low, int high) {
     return (rand() % (high - low + 1) + low);
 }
@@ -255,9 +254,8 @@ void HSequenceProxyFn(const CRecvProxyData *pDataConst, void *pStruct, void *pOu
                         break;
                     default:
                         m_nSequence--;
-                }
-                
-            }    
+                }   
+            }
             pData->m_Value.m_Int = m_nSequence;
         }
     }

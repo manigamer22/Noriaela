@@ -1,5 +1,8 @@
 # Counter Strike Global Offensive Skin Changer Mac
 
+#### Latest Update
+I decided to make seperate folders for Panorama UI(Current UI) and Scaleform(Last UI) since some people are choosing to use scaleform over panorama
+
 ### Setup
 Requirements:
 

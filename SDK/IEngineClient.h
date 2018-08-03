@@ -2,8 +2,7 @@
 
 class IEngineClient {
 public:
-    typedef struct player_info_s
-    {
+    typedef struct player_info_s {
         int64_t __pad0;
         union {
             int64_t xuid;
@@ -31,25 +30,20 @@ public:
         typedef VMatrix& (* Fn)(void*);
         return getvfunc<Fn>(this, 38)(this);
     }
-
     void GetScreenSize( int& width, int& height ){
         typedef void (* Fn)(void*, int&, int&);
         getvfunc<Fn>(this, 5)(this, width, height);
     }
-
     bool IsInGame() {
         typedef bool (* oIsInGame)(void*);
         return getvfunc<oIsInGame>(this, 26)(this);
     }
-    
     bool IsConnected() {
         typedef bool (* oIsConnected)(void*);
         return getvfunc<oIsConnected>(this, 27)(this);
     }
-    
     int GetLocalPlayer() {
         typedef int (* oGetLocalPlayer)(void*);
         return getvfunc<oGetLocalPlayer>(this, 12)(this);
     }
-
 };

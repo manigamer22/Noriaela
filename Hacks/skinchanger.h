@@ -33,6 +33,10 @@ public:
         {WEAPON_KNIFE_SURVIVAL_BOWIE, "models/weapons/v_knife_survival_bowie.mdl"}, // Bowie Knife 
         {WEAPON_KNIFE_BUTTERFLY, "models/weapons/v_knife_butterfly.mdl"}, // Butterfly Knife 
         {WEAPON_KNIFE_PUSH, "models/weapons/v_knife_push.mdl"}, // Shadow Daggers 
+		{WEAPON_KNIFE_URSUS, "models/weapons/v_knife_ursus.mdl"}, // Ursus Knife Pull out is broken
+		{WEAPON_KNIFE_GYPSY_JACKKNIFE, "models/weapons/v_knife_gypsy_jackknife.mdl"}, // Navaja Knife
+		{WEAPON_KNIFE_STILETTO, "models/weapons/v_knife_stiletto.mdl"}, // Stiletto Knife
+		{WEAPON_KNIFE_WIDOWMAKER, "models/weapons/v_knife_widowmaker.mdl"}, // Talon Knife (Inspect animation is broken)
         {WEAPON_KNIFE, "models/weapons/v_knife_default_ct.mdl"}, // Default CT Knife (Only needed if you don't want to use a knife)
         {WEAPON_KNIFE_T, "models/weapons/v_knife_default_t.mdl"} // Default T Knife (Only needed if you don't want to use a knife)
     });
