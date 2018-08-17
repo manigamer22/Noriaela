@@ -1,5 +1,7 @@
 # Counter Strike Global Offensive Skin Changer Mac
 
+### Hey guys if you think i updated the skinchanger well its not me i just help people if they need it tho. So dont say to others that i made this cheat. Thank you. Sorry Warlauke 
+
 ### Setup
 Requirements:
 
